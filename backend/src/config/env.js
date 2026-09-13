@@ -12,6 +12,8 @@ const config = {
   jwtSecret: process.env.JWT_SECRET || 'dev_secret_key_change_in_production',
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || '1d',
   cookieName: process.env.COOKIE_NAME || 'auth_token',
+  geminiApiKey: process.env.GEMINI_API_KEY || '',
 };
 
 module.exports = config;
+

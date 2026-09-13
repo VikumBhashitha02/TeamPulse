@@ -86,6 +86,7 @@ const reportsRoutes = require('./modules/reports/reports.routes');
 const reviewsRoutes = require('./modules/reviews/reviews.routes');
 const usersRoutes = require('./modules/users/users.routes');
 const dashboardRoutes = require('./modules/dashboard/dashboard.routes');
+const aiRoutes = require('./modules/ai/ai.routes');
 
 // ==========================================
 // API Feature Routes
@@ -97,6 +98,8 @@ app.use('/api/reports', reportsRoutes);
 app.use('/api/reviews', reviewsRoutes);
 app.use('/api/users', usersRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/ai', aiRoutes);
+
 
 // ==========================================
 // Error Handling

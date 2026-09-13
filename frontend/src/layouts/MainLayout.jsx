@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from '../components/common/Sidebar';
 import Navbar from '../components/common/Navbar';
+import AIChatWidget from '../components/ai/AIChatWidget';
 
 export default function MainLayout() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex">
+    <div className="min-h-screen bg-slate-950 text-slate-100 flex relative">
       {/* Sidebar Component */}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
@@ -21,6 +22,10 @@ export default function MainLayout() {
           <Outlet />
         </main>
       </div>
+
+      {/* Floating AI Management Assistant (MANAGER_ADMIN only) */}
+      <AIChatWidget />
     </div>
   );
 }
+
